@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 
 public class Hola{
     public static void main(String[] args){
