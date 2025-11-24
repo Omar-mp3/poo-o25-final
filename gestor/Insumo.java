@@ -1,10 +1,6 @@
 package gestor;
 
-public class Insumo {
-
-    public void prueba(){
-        
-    }
+public abstract class Insumo {
     /*
     Los modificadores de visibilidad pueden cambiar, no sé qué tanto acceso deba haber a ellos
     */
@@ -44,7 +40,15 @@ public class Insumo {
     public Insumo(String nombre){
         setNombre(nombre);
     }
-
+    public Insumo(String nombre, double cantidadDisponible){
+        this(nombre);
+        setCantidadDisponible(cantidadDisponible);
+    }
+    public Insumo(String nombre, double cantidadDisponible, String unidad, double costoPorUnidad){
+        this(nombre, cantidadDisponible);
+        setCostoPorUnidad(costoPorUnidad);
+        setUnidad(unidad);
+    }
 
 
     //Métodos propios
@@ -58,9 +62,7 @@ public class Insumo {
     public void disminuirCantidad(double cantidad){
         cantidadDisponible -= cantidad;
     }
-    public double calcularCostoTotal(double cantidad){
-        double costo = 0.0;
-        //añadir comportamiento
-        return costo;
-    }
+
+    //método abstracto, depende de la receta la forma de calcular el costo total
+    public abstract double calcularCostoTotal(double cantidad);
 }
