@@ -1,11 +1,11 @@
 package gestor;
 
-public abstract class Insumo {
+public class Insumo {
     /*
     Los modificadores de visibilidad pueden cambiar, no sé qué tanto acceso deba haber a ellos
     */
     public String nombre; 
-    public double cantidadDisponible;
+    public double cantidadDisponible = 0.0;
     public String unidad;
     public double costoPorUnidad;
 
@@ -62,7 +62,7 @@ public abstract class Insumo {
     public void disminuirCantidad(double cantidad){
         cantidadDisponible -= cantidad;
     }
-
-    //método abstracto, depende de la receta la forma de calcular el costo total
-    public abstract double calcularCostoTotal(double cantidad);
+    public double calcularCostoTotal(double cantidad){
+        return cantidad*costoPorUnidad;
+    }
 }

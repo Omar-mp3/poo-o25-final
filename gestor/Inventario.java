@@ -8,6 +8,7 @@ public class Inventario {
     Creo que para manejar los insumos sería más conveniente un mapa, o un set
     que permita que no se repitan los insumos que agreguemos
     */
+    
     public List<Insumo> listaInsumos = new ArrayList<>();
 
     //métodos propios
