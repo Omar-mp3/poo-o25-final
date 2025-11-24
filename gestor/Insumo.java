@@ -2,6 +2,9 @@ package gestor;
 
 public class Insumo {
 
+    public void prueba(){
+        
+    }
     /*
     Los modificadores de visibilidad pueden cambiar, no sé qué tanto acceso deba haber a ellos
     */
